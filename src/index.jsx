@@ -16,16 +16,12 @@ import ExamplePage from './example/ExamplePage';
 import './index.scss';
 import './assets/favicon.ico';
 
-subscribe(APP_READY, () => {
+//subscribe(APP_READY, () => {
   ReactDOM.render(
-    <AppProvider>
-      <Header />
-      <ExamplePage />
-      <Footer />
-    </AppProvider>,
+      <ExamplePage />,
     document.getElementById('root'),
   );
-});
+//});
 
 subscribe(APP_INIT_ERROR, (error) => {
   ReactDOM.render(<ErrorPage message={error.message} />, document.getElementById('root'));
